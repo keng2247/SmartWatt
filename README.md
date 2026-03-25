@@ -2,6 +2,10 @@
 
 SmartWatt is a full-stack residential energy estimation platform for Kerala households. The project combines a machine learning inference layer with physics-based constraints to produce appliance-level consumption estimates, bill projections, and usage insights.
 
+## About
+
+SmartWatt is designed to provide practical, software-only household energy intelligence without requiring additional IoT hardware. The platform estimates appliance-wise consumption from user-provided inputs, reconciles predictions with physics constraints, and produces transparent reports aligned with Kerala tariff structures. It is intended for student research, engineering validation, and real-world decision support for electricity cost optimization.
+
 ## Repository Structure
 
 - `Backend/`: FastAPI-based inference and billing service.
