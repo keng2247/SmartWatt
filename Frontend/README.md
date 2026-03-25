@@ -1,69 +1,77 @@
-# SmartWatt AI - Frontend ⚡
+# SmartWatt Frontend
 
- Physics-Informed Integrated Hybrid AI Architecture for Energy Estimation. 
+SmartWatt Frontend is a Next.js application for household energy estimation workflows, including guided data input, appliance-level analytics, and historical dashboard views.
 
-![SmartWatt Status](https://img.shields.io/badge/Status-Beta-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Next.js](https://img.shields.io/badge/Next.js-15.0-black)
+## Core Capabilities
 
-SmartWatt is a next-generation residential energy estimation tool designed for Kerala households. It solves the "Linear Load Paradox" by combining Deep Learning (for complex loads like ACs and Fridges) with Physics-based constraints (for linear loads like Fans and Lights).
+- Multi-step assessment flow for household and appliance details.
+- Quick and detailed analysis modes.
+- Interactive charts for consumption distribution and trends.
+- Assessment history with dashboard-level exploration.
+- Authentication and persistence integration with Supabase.
+- PDF report generation and what-if simulation display.
 
-This repository contains the  Frontend  built with [Next.js](https://nextjs.org/), offering a responsive, modern interface for users to input their appliance details and receive highly accurate bill predictions.
+## Technology Stack
 
----
+- Next.js 16
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- Recharts and Plotly
+- Axios
+- Supabase JavaScript client
 
-## 🚀 Features
+## Project Layout
 
--    Hybrid AI Interface : Seamlessly gathers user inputs that feed into our Dual-Inference Engine.
--    Dynamic Dashboard : Visualizes energy consumption with interactive charts (Recharts/Plotly).
--    Smart Recommendations : Provides AI-generated insights to reduce electricity bills (e.g., "Switching to a 5-star AC saves ₹400/month").
--    User Intent Override : Respects manual usage inputs while intelligently adjusting efficiency factors in the background.
--    Responsive Design : Optimized for both Desktop and Mobile devices.
+- `src/app/`: route-based pages including main flow, authentication, and dashboard.
+- `src/components/`: reusable UI and feature components.
+- `src/hooks/`: analysis and simulation orchestration hooks.
+- `src/lib/`: API modules, transformations, utilities, and types.
+- `src/config/`: appliance and usage form metadata.
 
-## 🛠️ Tech Stack
+## Local Setup
 
--    Framework : [Next.js](https://nextjs.org/) (React)
--    Styling : [Tailwind CSS](https://tailwindcss.com/)
--    Visualization : [Recharts](https://recharts.org/), Plotly.js
--    State Management : React Hooks
--    Language : TypeScript
+1. Move to the frontend directory.
 
-## 📦 Getting Started
+```bash
+cd Frontend
+```
 
-1.   Clone the repository: 
-    ```bash
-    git clone https://github.com/JishnuPG-tech/SmartWatt-Frontend.git
-    cd SmartWatt-Frontend
-    ```
+2. Install dependencies.
 
-2.   Install dependencies: 
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
+```bash
+npm install
+```
 
-3.   Run the development server: 
-    ```bash
-    npm run dev
-    ```
+3. Configure environment variables.
 
-4.   Open in Browser: 
-    Navigate to [http://localhost:3000](http://localhost:3000).
+```bash
+copy .env.example .env.local
+```
 
-## 🚀 Deployment
+4. Start the development server.
 
-This project is optimized for deployment on  Vercel .
+```bash
+npm run dev
+```
 
-1.  Push your code to GitHub.
-2.  Import the repository into Vercel.
-3.  Set the `NEXT_PUBLIC_BACKEND_URL` environment variable to your backend URL (e.g., your Render hosted API).
-4.  Click  Deploy .
+5. Open http://localhost:3000.
 
-## 📄 License 
+## Build and Run
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```bash
+npm run build
+npm run start
+```
 
----
+## Environment
 
-*Developed by the SmartWatt AI Team.*
+At minimum, configure the backend API URL:
+
+- `NEXT_PUBLIC_BACKEND_URL`
+
+Additional Supabase variables can be configured based on deployment setup.
+
+## License
+
+Licensed under the MIT License. See `LICENSE`.
