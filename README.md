@@ -43,7 +43,6 @@ npm run dev
 ## Configuration
 
 - Keep local secrets only in `.env` or `.env.local` files.
-- Do not commit secret environment files.
 - Use `.env.example` files as templates for required keys.
 
 ## Development Standards
