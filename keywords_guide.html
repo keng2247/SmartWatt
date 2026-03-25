@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SmartWatt – Keywords Guide</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --card2: #1c2128;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --yellow: #d29922;
+            --red: #f85149;
+            --purple: #bc8cff;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --border: #30363d
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7
+        }
+
+        .wrap {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f2d3d, #0d1117);
+            border-bottom: 1px solid var(--border);
+            padding: 32px 20px;
+            text-align: center
+        }
+
+        header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, var(--accent), var(--purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 6px
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: .93rem
+        }
+
+        nav {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: .82rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: all .2s;
+            text-decoration: none
+        }
+
+        nav a:hover {
+            background: var(--card2);
+            color: var(--accent)
+        }
+
+        section {
+            margin: 28px 0
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 14px 0
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 6px 0;
+            font-size: .9rem
+        }
+
+        th {
+            background: var(--card2);
+            color: var(--accent);
+            padding: 10px 14px;
+            text-align: left;
+            border: 1px solid var(--border);
+            font-weight: 600
+        }
+
+        td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: #c9d1d9;
+            vertical-align: top
+        }
+
+        td:first-child {
+            color: var(--yellow);
+            font-weight: 600;
+            white-space: nowrap;
+            min-width: 190px;
+            font-family: 'Courier New', monospace;
+            font-size: .88rem
+        }
+
+        tr:nth-child(even) td {
+            background: #1a1f27
+        }
+
+        code {
+            background: #1e2a3a;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: .87rem;
+            color: #79c0ff;
+            font-family: 'Courier New', monospace
+        }
+
+        .note {
+            background: #0d1f2d;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            color: #a8d4f5;
+            font-size: .93rem
+        }
+
+        .tip {
+            background: #1a1a2e;
+            border-left: 4px solid var(--purple);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            color: #d0b8ff;
+            font-size: .95rem
+        }
+
+        .warn {
+            background: #2a1f00;
+            border-left: 4px solid var(--yellow);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            color: #e4c072;
+            font-size: .93rem
+        }
+
+        .hl {
+            color: var(--accent);
+            font-weight: 600
+        }
+
+        .cat {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: .72rem;
+            font-weight: 700;
+            margin-left: 6px;
+            vertical-align: middle
+        }
+
+        .c-ai {
+            background: #1a1a3a;
+            color: var(--purple)
+        }
+
+        .c-py {
+            background: #1a3a2a;
+            color: var(--green)
+        }
+
+        .c-fe {
+            background: #1f3a5f;
+            color: var(--accent)
+        }
+
+        .c-db {
+            background: #3a1a2a;
+            color: #ff79c6
+        }
+
+        .c-ph {
+            background: #3a2e00;
+            color: var(--yellow)
+        }
+
+        .c-sp {
+            background: #1a2a1a;
+            color: #a8ff78
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🔑 SmartWatt — Keywords &amp; Terms Guide</h1>
+        <p>Every important keyword, term, function, and concept — explained in 1–2 simple lines · For Viva Preparation
+        </p>
+        <div style="margin-top:10px;font-size:.82rem;color:var(--muted)">
+            <span style="background:#1a1a3a;color:var(--purple);padding:2px 8px;border-radius:8px;margin:2px">🤖
+                AI/ML</span>
+            <span style="background:#1a3a2a;color:var(--green);padding:2px 8px;border-radius:8px;margin:2px">🐍
+                Python/Backend</span>
+            <span style="background:#1f3a5f;color:var(--accent);padding:2px 8px;border-radius:8px;margin:2px">⚛️
+                Frontend</span>
+            <span style="background:#3a1a2a;color:#ff79c6;padding:2px 8px;border-radius:8px;margin:2px">🗄️
+                Database</span>
+            <span style="background:#3a2e00;color:var(--yellow);padding:2px 8px;border-radius:8px;margin:2px">⚡
+                Physics/Electrical</span>
+            <span style="background:#1a2a1a;color:#a8ff78;padding:2px 8px;border-radius:8px;margin:2px">🎯
+                Project-Specific</span>
+        </div>
+    </header>
+    <nav>
+        <a href="#aiml">AI &amp; ML</a>
+        <a href="#nn">Neural Network</a>
+        <a href="#training">Training Terms</a>
+        <a href="#project">Project-Specific</a>
+        <a href="#backend">Backend / Python</a>
+        <a href="#api">API Terms</a>
+        <a href="#electrical">Electrical / Physics</a>
+        <a href="#kseb">KSEB &amp; Billing</a>
+        <a href="#database">Database</a>
+        <a href="#frontend">Frontend / Web</a>
+        <a href="#general">General CS</a>
+    </nav>
+    <div class="wrap">
+
+        <div class="tip">💡 <strong>How to use this guide:</strong> Find the keyword the mentor asks, read the "What It
+            Is" and "In SmartWatt" columns. Always try to connect the term back to SmartWatt — that's what impresses
+            examiners.</div>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="aiml">
+            <div class="card">
+                <h2>🤖 Artificial Intelligence &amp; Machine Learning Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Artificial Intelligence (AI)</td>
+                        <td>Technology that makes computers learn and make decisions like humans. In SmartWatt, AI
+                            learns household electricity usage patterns from data and predicts how much each appliance
+                            consumes.</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Learning (ML)</td>
+                        <td>A branch of AI where a program learns from data without being explicitly programmed.
+                            SmartWatt uses ML to train 22 neural network models that predict appliance consumption.</td>
+                    </tr>
+                    <tr>
+                        <td>Neural Network</td>
+                        <td>An AI model inspired by the human brain — made of connected layers of "neurons". SmartWatt
+                            uses one neural network per appliance (22 total) to predict efficiency factor and effective
+                            hours.</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Learning</td>
+                        <td>A type of ML that uses neural networks with multiple hidden layers. SmartWatt's multi-layer
+                            network (128→64 neurons) is a deep learning model.</td>
+                    </tr>
+                    <tr>
+                        <td>Supervised Learning</td>
+                        <td>Training a model using labelled input-output pairs. SmartWatt trains with synthetic data
+                            where inputs = appliance specs and outputs = efficiency factor + usage hours.</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-output Neural Network</td>
+                        <td>A neural network that predicts two values at the same time from one input. SmartWatt uses
+                            this to predict both <em>efficiency factor</em> (0.5–1.5) and <em>effective hours</em>
+                            (0–24) in a single forward pass.</td>
+                    </tr>
+                    <tr>
+                        <td>Hybrid AI–Physics Model</td>
+                        <td>SmartWatt's most important concept — combines AI (learns patterns) with physics formulas
+                            (sets real-world limits). This prevents unrealistic predictions while still capturing
+                            complex usage patterns.</td>
+                    </tr>
+                    <tr>
+                        <td>Prediction / Inference</td>
+                        <td>Using a trained AI model on new, unseen data to get outputs. Every time a user submits
+                            appliances in SmartWatt, the system runs inference on each appliance's neural network.</td>
+                    </tr>
+                    <tr>
+                        <td>Overfitting</td>
+                        <td>When a model memorises training data instead of learning general patterns — performs well on
+                            training data but badly on new data. SmartWatt prevents this using Dropout and Early
+                            Stopping.</td>
+                    </tr>
+                    <tr>
+                        <td>Generalisation</td>
+                        <td>A model's ability to perform well on new, unseen data. SmartWatt generalises by training on
+                            diverse 12,000-household data with varied seasons, locations, and appliance specs.</td>
+                    </tr>
+                    <tr>
+                        <td>Monte Carlo Simulation</td>
+                        <td>A technique that randomly samples from defined probability distributions many times to
+                            generate large, realistic datasets. SmartWatt uses it to generate 12,000 Kerala household
+                            electricity profiles for training.</td>
+                    </tr>
+                    <tr>
+                        <td>Synthetic Dataset</td>
+                        <td>A dataset generated by computer simulation rather than collected from real measurements.
+                            SmartWatt uses a synthetic dataset because real KSEB meter data is not publicly available.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feature</td>
+                        <td>A single measurable input variable given to a machine learning model. SmartWatt features
+                            include: <code>ac_tonnage</code>, <code>star_rating</code>, <code>n_occupants</code>,
+                            <code>season</code>, <code>location_type</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Label / Target</td>
+                        <td>The output value a model is trained to predict. In SmartWatt, the labels are
+                            <code>real_efficiency_factor</code> and <code>real_effective_hours</code> for each
+                            appliance.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Confidence Score</td>
+                        <td>A percentage showing how much the system trusts its own prediction. SmartWatt starts at
+                            98.2% and reduces it if anomalies are detected, fallback mode is used, or input features are
+                            missing.</td>
+                    </tr>
+                    <tr>
+                        <td>Anomaly Detection</td>
+                        <td>Identifying data points that deviate significantly from normal. SmartWatt has two types:
+                            <strong>Usage Anomaly</strong> (hours exceed limits) and <strong>Efficiency Anomaly</strong>
+                            (appliance consuming 15%+ more than rated).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bias (in AI)</td>
+                        <td>A systematic error in predictions. SmartWatt's <code>BiasAdjuster</code> service detects
+                            when predictions are consistently off for a user and applies a correction multiplier.</td>
+                    </tr>
+                    <tr>
+                        <td>Self-Learning System</td>
+                        <td>A system that automatically improves using real production data over time. SmartWatt
+                            retrains its models every 6 hours using actual user data from Supabase.</td>
+                    </tr>
+                    <tr>
+                        <td>Model Deployment</td>
+                        <td>Making a trained AI model available for live use. SmartWatt deploys updated models only if
+                            they pass MAE and R² validation — preventing regressions.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="nn">
+            <div class="card">
+                <h2>🧠 Neural Network Architecture Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Neuron / Node</td>
+                        <td>The basic unit of a neural network — takes inputs, multiplies by weights, adds bias, and
+                            passes through activation function. SmartWatt's hidden layers have 128 and 64 neurons.</td>
+                    </tr>
+                    <tr>
+                        <td>Layer</td>
+                        <td>A group of neurons at the same level in the network. SmartWatt has: Input Layer → Hidden
+                            Layer 1 (128) → Hidden Layer 2 (64) → Two Output Heads.</td>
+                    </tr>
+                    <tr>
+                        <td>Input Layer</td>
+                        <td>The first layer that receives raw data. SmartWatt's input is appliance specs + household
+                            features (tonnage, star rating, season, occupants, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td>Hidden Layer</td>
+                        <td>Intermediate layers between input and output — learn complex patterns. SmartWatt has two:
+                            128 neurons then 64 neurons, both with ReLU activation.</td>
+                    </tr>
+                    <tr>
+                        <td>Output Layer / Head</td>
+                        <td>The final layer giving the prediction. SmartWatt has two output heads — one for efficiency
+                            factor, one for effective hours (multi-output design).</td>
+                    </tr>
+                    <tr>
+                        <td>Shared Layers</td>
+                        <td>Hidden layers whose learned representations feed into multiple output branches. SmartWatt's
+                            128→64 layers are shared between the efficiency and hours output heads.</td>
+                    </tr>
+                    <tr>
+                        <td>Activation Function (ReLU)</td>
+                        <td>A function applied to each neuron's output — ReLU outputs 0 for negative values and the
+                            value itself for positives. Used in SmartWatt's hidden layers to add non-linearity and learn
+                            complex patterns.</td>
+                    </tr>
+                    <tr>
+                        <td>Weight / Parameter</td>
+                        <td>Numbers inside a neural network that are adjusted during training to minimise error.
+                            SmartWatt's models update hundreds of weights per training step.</td>
+                    </tr>
+                    <tr>
+                        <td>Dropout</td>
+                        <td>A regularization technique that randomly turns off 20% of neurons during each training step
+                            — prevents overfitting. SmartWatt applies <code>Dropout(0.2)</code> between hidden layers.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forward Pass</td>
+                        <td>The process of feeding input data through the network to get an output/prediction. Every
+                            SmartWatt prediction is a forward pass through the appliance's neural network.</td>
+                    </tr>
+                    <tr>
+                        <td>Backpropagation</td>
+                        <td>The process of sending error backwards through the network to update weights during
+                            training. Used in SmartWatt's training loop.</td>
+                    </tr>
+                    <tr>
+                        <td>Loss Function (MSE)</td>
+                        <td>A formula that measures how wrong the model's predictions are. SmartWatt uses Mean Squared
+                            Error (MSE) — penalises larger errors more heavily.</td>
+                    </tr>
+                    <tr>
+                        <td>Loss Weight</td>
+                        <td>A multiplier applied to individual output losses in a multi-output model. SmartWatt weighs
+                            efficiency loss 10× higher than hours loss because efficiency is harder to predict
+                            accurately.</td>
+                    </tr>
+                    <tr>
+                        <td>Optimizer (Adam)</td>
+                        <td>An algorithm that adjusts weights to reduce loss. Adam (Adaptive Moment Estimation) is used
+                            in SmartWatt — it automatically adjusts the learning rate per parameter.</td>
+                    </tr>
+                    <tr>
+                        <td>Learning Rate</td>
+                        <td>Controls how big each weight update step is during training. Too high = unstable, too low =
+                            slow. Adam handles this automatically in SmartWatt.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="training">
+            <div class="card">
+                <h2>📊 Training &amp; Evaluation Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Epoch</td>
+                        <td>One complete pass through the entire training dataset. SmartWatt trains for up to 120
+                            epochs, but Early Stopping usually stops it earlier when validation loss plateaus.</td>
+                    </tr>
+                    <tr>
+                        <td>Batch Size</td>
+                        <td>Number of training samples processed in one step before weights are updated. SmartWatt uses
+                            batch size 32 — a balance between speed and stable learning.</td>
+                    </tr>
+                    <tr>
+                        <td>Training Set</td>
+                        <td>Data used to train/learn model weights. SmartWatt uses 80% of the 12,000-household dataset
+                            for training.</td>
+                    </tr>
+                    <tr>
+                        <td>Validation Set</td>
+                        <td>Data not seen during training, used to monitor performance after each epoch. SmartWatt uses
+                            the remaining 20% as the validation set.</td>
+                    </tr>
+                    <tr>
+                        <td>Early Stopping</td>
+                        <td>A technique that stops training when validation loss doesn't improve for a set number of
+                            epochs. SmartWatt uses patience=10 — stops if no improvement for 10 consecutive epochs, then
+                            restores the best weights.</td>
+                    </tr>
+                    <tr>
+                        <td>MAE (Mean Absolute Error)</td>
+                        <td>Average of absolute differences between predicted and actual values. SmartWatt's
+                            LearningPipeline uses MAE to judge if a newly trained model is better than the current one.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R² Score</td>
+                        <td>Measures how well the model explains variance in the data — 1.0 is perfect, 0 means no
+                            better than mean. SmartWatt requires a higher R² for the new model to replace the old one in
+                            production.</td>
+                    </tr>
+                    <tr>
+                        <td>StandardScaler</td>
+                        <td>A scikit-learn tool that normalises numerical features to have mean=0 and standard
+                            deviation=1. SmartWatt scales numeric features like tonnage, capacity, occupants before
+                            feeding to the neural network.</td>
+                    </tr>
+                    <tr>
+                        <td>OneHotEncoding</td>
+                        <td>Converts categorical variables into binary columns. SmartWatt encodes features like
+                            <code>season</code> (summer/monsoon/winter) and <code>location_type</code> (urban/rural)
+                            this way.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ColumnTransformer</td>
+                        <td>A scikit-learn pipeline tool that applies different preprocessing steps to different
+                            columns. SmartWatt uses it to apply StandardScaler to numerics and OneHotEncoder to
+                            categoricals simultaneously.</td>
+                    </tr>
+                    <tr>
+                        <td>Preprocessor (.pkl)</td>
+                        <td>The saved scikit-learn ColumnTransformer fitted during training. Saved as a
+                            <code>.pkl</code> file alongside each model and used at inference time to transform new
+                            inputs identically.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Train-Test Split</td>
+                        <td>Dividing dataset into separate training and evaluation portions. SmartWatt uses 80/20 split
+                            — 9,600 for training, 2,400 for validation.</td>
+                    </tr>
+                    <tr>
+                        <td>model.save() / .keras</td>
+                        <td>TensorFlow function to save a trained model to disk. SmartWatt saves each of the 22 models
+                            as <code>appliance_model.keras</code> files in the <code>models/</code> folder.</td>
+                    </tr>
+                    <tr>
+                        <td>joblib (.pkl)</td>
+                        <td>A Python library for efficiently saving and loading scikit-learn objects (like the
+                            preprocessor pipelines). Each appliance preprocessor is saved as
+                            <code>appliance_preprocessor.pkl</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ThreadPoolExecutor</td>
+                        <td>A Python library for running tasks in parallel threads. SmartWatt uses it in
+                            <code>BatchPredictor</code> to predict all 22 appliances simultaneously — 3–5× faster than
+                            sequential.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="project">
+            <div class="card">
+                <h2>🎯 SmartWatt Project-Specific Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Efficiency Factor</td>
+                        <td>AI output 1 — ranges 0.5 to 1.5. Represents appliance degradation: 1.0 = rated performance,
+                            1.2 = 20% more power (degraded), 0.8 = efficient. Used in the final kWh formula.</td>
+                    </tr>
+                    <tr>
+                        <td>Effective Hours</td>
+                        <td>AI output 2 — ranges 0 to 24 hours/day. The model's learned estimate of how many hours this
+                            appliance actually operates daily given the household context.</td>
+                    </tr>
+                    <tr>
+                        <td>Base Watts</td>
+                        <td>The rated electrical power of an appliance calculated by the Physics Engine from specs.
+                            e.g., 1.5T 3-star AC → 2160W. Multiplied with efficiency factor and hours to get kWh.</td>
+                    </tr>
+                    <tr>
+                        <td>monthly_kWh formula</td>
+                        <td>The core calculation:
+                            <code>(Base Watts × Efficiency Factor × Effective Hours × 30) / 1000</code>. Dividing by
+                            1000 converts Wh to kWh, multiplying by 30 gives monthly total.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>System Load</td>
+                        <td>Unaccounted electricity from standby devices, phone chargers, routers, wiring losses —
+                            things the user didn't list. SmartWatt caps this at 15% of total consumption.</td>
+                    </tr>
+                    <tr>
+                        <td>System Load Cap (15%)</td>
+                        <td>The maximum allowed unaccounted consumption. Based on electrical engineering studies. If
+                            System Load exceeds 15%, the excess is redistributed proportionally to major appliances.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Usage Anomaly</td>
+                        <td>First type of anomaly — triggered when usage hours exceed realistic limits (e.g., geyser >
+                            3h/day, AC > 16h/day). Indicates unusual behaviour that the user should verify.</td>
+                    </tr>
+                    <tr>
+                        <td>Efficiency Anomaly</td>
+                        <td>Second type — triggered when efficiency factor > 1.15 (Warning) or > 1.25 (Critical).
+                            Indicates the appliance is consuming significantly more than rated → may need servicing or
+                            replacement.</td>
+                    </tr>
+                    <tr>
+                        <td>Hybrid Prediction</td>
+                        <td>SmartWatt's core approach — AI predicts the efficiency factor and hours, while Physics
+                            provides the base wattage. The final kWh is computed from both together.</td>
+                    </tr>
+                    <tr>
+                        <td>Physics-Only Fallback</td>
+                        <td>If AI model fails to load or transform fails, SmartWatt falls back to pure physics
+                            calculation using rated specs. Confidence score is reduced when this happens.</td>
+                    </tr>
+                    <tr>
+                        <td>Smart Feature Inference</td>
+                        <td>When a required input feature is missing, SmartWatt's predictor estimates it from other
+                            available data (e.g., estimates <code>n_occupants</code> from number of fans or AC units the
+                            user listed).</td>
+                    </tr>
+                    <tr>
+                        <td>BiasAdjuster</td>
+                        <td>A service that applies a learned per-user correction multiplier to predictions. If a user's
+                            past predictions were consistently 10% too high, it applies a 0.9× factor next time.</td>
+                    </tr>
+                    <tr>
+                        <td>What-If Simulation</td>
+                        <td>A feature that shows predicted kWh savings for 8 upgrade scenarios — upgrade AC star rating,
+                            switch to BLDC fans, replace old fridge, reduce geyser time, switch to LED lights, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>Appliance Preloading</td>
+                        <td>On server startup, all 22 models and 22 preprocessors are loaded into RAM so prediction
+                            requests are answered instantly without file loading delay.</td>
+                    </tr>
+                    <tr>
+                        <td>distributeEnergyGap()</td>
+                        <td>Frontend function in <code>energyUtils.ts</code>. Intelligently distributes the difference
+                            between physics-calculated total and the user's actual bill kWh — scales appliances up or
+                            down to match the real bill.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="backend">
+            <div class="card">
+                <h2>🐍 Python &amp; Backend Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Primary programming language for SmartWatt's backend — chosen for its rich AI/ML library
+                            ecosystem (TensorFlow, scikit-learn, Pandas, NumPy).</td>
+                    </tr>
+                    <tr>
+                        <td>TensorFlow</td>
+                        <td>Google's open-source ML framework for building and running neural networks. SmartWatt uses
+                            it to define model architecture, train models, save them, and run inference.</td>
+                    </tr>
+                    <tr>
+                        <td>Keras</td>
+                        <td>High-level API built on top of TensorFlow that makes building neural networks simpler.
+                            SmartWatt uses <code>keras.Model</code>, <code>keras.layers.Dense</code>, and
+                            <code>keras.layers.Dropout</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>scikit-learn</td>
+                        <td>Python ML library for data preprocessing and evaluation. SmartWatt uses it for
+                            <code>StandardScaler</code>, <code>OneHotEncoder</code>, and <code>ColumnTransformer</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandas (pd)</td>
+                        <td>Python library for data manipulation using DataFrames (tables). SmartWatt uses it to load
+                            and process the training CSV dataset and prepare input data for AI models.</td>
+                    </tr>
+                    <tr>
+                        <td>NumPy (np)</td>
+                        <td>Python library for fast numerical computation using arrays. SmartWatt uses it for matrix
+                            operations, clipping values (e.g., capping efficiency between 0.5–1.5), and averaging
+                            training curves.</td>
+                    </tr>
+                    <tr>
+                        <td>Pydantic</td>
+                        <td>Python library for data validation using type annotations. SmartWatt uses Pydantic models in
+                            <code>schemas.py</code> to validate all API inputs — invalid data is rejected before AI
+                            runs.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@validator</td>
+                        <td>Pydantic decorator for custom validation logic. SmartWatt uses it to enforce
+                            appliance-specific rules like "AC tonnage must be between 0.5 and 5.0 tons".</td>
+                    </tr>
+                    <tr>
+                        <td>uvicorn</td>
+                        <td>A fast Python ASGI web server. SmartWatt runs <code>uvicorn main:app --reload</code> to
+                            start the backend — it handles incoming HTTP requests and routes them to FastAPI.</td>
+                    </tr>
+                    <tr>
+                        <td>@app.on_event("startup")</td>
+                        <td>FastAPI decorator that runs a function when the server starts. SmartWatt uses it to call
+                            <code>get_predictor().preload_all_models()</code> — loads all 22 models into memory before
+                            any request arrives.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Singleton Pattern</td>
+                        <td>A design pattern ensuring only one instance of a class exists. SmartWatt's predictor uses
+                            <code>get_predictor()</code> which returns the same <code>AppliancePredictor</code> instance
+                            across all requests.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CORS Middleware</td>
+                        <td>Cross-Origin Resource Sharing — allows the frontend (on a different domain/port) to make API
+                            calls to the backend. SmartWatt configures CORS with <code>allow_origins=["*"]</code> for
+                            open access.</td>
+                    </tr>
+                    <tr>
+                        <td>Joblib</td>
+                        <td>Python library for saving/loading Python objects efficiently. SmartWatt uses
+                            <code>joblib.dump()</code> to save preprocessors as <code>.pkl</code> files and
+                            <code>joblib.load()</code> to restore them.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>python-dotenv</td>
+                        <td>Library that loads environment variables from a <code>.env</code> file into Python's
+                            environment. SmartWatt uses it to load Supabase URL and API key without hardcoding secrets.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>EarlyStopping callback</td>
+                        <td>A Keras callback that monitors validation loss during training and stops when no improvement
+                            is seen for <code>patience</code> epochs. SmartWatt uses
+                            <code>patience=10, restore_best_weights=True</code>.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="api">
+            <div class="card">
+                <h2>🌐 FastAPI &amp; API Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>FastAPI</td>
+                        <td>Modern Python web framework for building REST APIs — fast, automatic documentation, built-in
+                            validation. SmartWatt's entire backend is built on FastAPI.</td>
+                    </tr>
+                    <tr>
+                        <td>REST API</td>
+                        <td>Representational State Transfer — a standard for web APIs using HTTP methods (GET, POST).
+                            SmartWatt's backend exposes REST endpoints that the Next.js frontend calls.</td>
+                    </tr>
+                    <tr>
+                        <td>Endpoint</td>
+                        <td>A specific URL in the API that performs an action. SmartWatt endpoints:
+                            <code>/predict-appliance</code>, <code>/predict-all</code>, <code>/calculate-bill</code>,
+                            <code>/simulate-savings</code>, <code>/health</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HTTP POST</td>
+                        <td>An HTTP method that sends data to the server in the request body. SmartWatt's prediction and
+                            bill calculation endpoints all use POST requests with JSON body.</td>
+                    </tr>
+                    <tr>
+                        <td>HTTP GET</td>
+                        <td>An HTTP method that retrieves data from the server. SmartWatt's <code>/health</code> and
+                            <code>/</code> (root) endpoints use GET.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>JSON (JavaScript Object Notation)</td>
+                        <td>Lightweight data format used for sending data between frontend and backend. All SmartWatt
+                            API requests and responses use JSON format.</td>
+                    </tr>
+                    <tr>
+                        <td>Request Body</td>
+                        <td>Data sent along with a POST request. SmartWatt sends appliance details, household info, and
+                            usage data as JSON in the request body to <code>/predict-all</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>Response</td>
+                        <td>What the server sends back after processing a request. SmartWatt responses include:
+                            <code>prediction</code> (kWh), <code>insights</code> (efficiency, hours),
+                            <code>confidence</code>, and <code>anomalies</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Router</td>
+                        <td>A FastAPI component that groups related endpoints together. SmartWatt has a
+                            <code>routers/appliances.py</code> router that handles all prediction and simulation
+                            endpoints.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Axios</td>
+                        <td>A JavaScript HTTP client library used in the frontend to make API calls. SmartWatt's
+                            <code>api/client.ts</code> configures Axios with the backend URL and timeout.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>/health endpoint</td>
+                        <td>An API endpoint that confirms the server is running and models are loaded. SmartWatt returns
+                            <code>{"status":"healthy", "models_loaded":22}</code> — useful for deployment monitoring.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Status Code 200</td>
+                        <td>HTTP success code — means the request was processed correctly. SmartWatt returns 200 for
+                            successful predictions.</td>
+                    </tr>
+                    <tr>
+                        <td>Status Code 422</td>
+                        <td>HTTP Unprocessable Entity — returned by FastAPI/Pydantic when input validation fails.
+                            SmartWatt returns 422 with error details if AC tonnage is out of range, for example.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="electrical">
+            <div class="card">
+                <h2>⚡ Electrical &amp; Physics Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Watt (W)</td>
+                        <td>The unit of electrical power — how fast energy is consumed. SmartWatt's Physics Engine
+                            converts appliance specs into watts (e.g., 1.5T AC = 2160W).</td>
+                    </tr>
+                    <tr>
+                        <td>Kilowatt (kW)</td>
+                        <td>1 kilowatt = 1000 watts. Used to express larger power values. A 2kW geyser = 2000W.</td>
+                    </tr>
+                    <tr>
+                        <td>kWh (Kilowatt-hour)</td>
+                        <td>The unit of energy on your KSEB electricity bill — 1 kWh = using 1000W for 1 hour. SmartWatt
+                            predicts monthly kWh consumption for each appliance individually.</td>
+                    </tr>
+                    <tr>
+                        <td>Power Rating</td>
+                        <td>The maximum electrical power an appliance is designed to consume, printed on the label
+                            (e.g., "750W"). SmartWatt's Physics Engine uses power ratings as the baseline for
+                            calculations.</td>
+                    </tr>
+                    <tr>
+                        <td>Star Rating</td>
+                        <td>Energy efficiency rating given by BEE (Bureau of Energy Efficiency) — 1 star (least
+                            efficient) to 5 stars (most efficient). Higher star = lower electricity consumption.
+                            SmartWatt uses star rating to adjust base watts.</td>
+                    </tr>
+                    <tr>
+                        <td>BEE (Bureau of Energy Efficiency)</td>
+                        <td>Government body that assigns star ratings to appliances in India. SmartWatt's physics
+                            formulas are based on BEE efficiency standards.</td>
+                    </tr>
+                    <tr>
+                        <td>Tonnage (AC)</td>
+                        <td>Measure of an AC's cooling capacity — 1 ton cools approximately 100 sq ft. SmartWatt
+                            supports 1.0T, 1.5T, and 2.0T ACs — higher tonnage = higher watts.</td>
+                    </tr>
+                    <tr>
+                        <td>HP (Horsepower)</td>
+                        <td>Unit of power for motors like water pumps — 1 HP = 746 Watts. SmartWatt uses
+                            <code>HP × 746</code> to calculate water pump wattage.</td>
+                    </tr>
+                    <tr>
+                        <td>BLDC (Brushless DC) Fan</td>
+                        <td>An energy-efficient fan type using brushless DC motor — consumes only 30W vs 75W for
+                            standard fans. SmartWatt's simulation shows users the savings of switching to BLDC.</td>
+                    </tr>
+                    <tr>
+                        <td>Voltage Fluctuation</td>
+                        <td>Variation in electrical supply voltage — common in rural Kerala. Causes appliances to
+                            consume more power or degrade faster. SmartWatt's synthetic dataset includes rural voltage
+                            fluctuation as a factor.</td>
+                    </tr>
+                    <tr>
+                        <td>Standby Power</td>
+                        <td>Electricity consumed by devices when switched off but still plugged in (e.g., TV on
+                            standby). Part of SmartWatt's System Load which is capped at 15%.</td>
+                    </tr>
+                    <tr>
+                        <td>Efficiency Degradation</td>
+                        <td>Over time, appliances become less efficient and consume more electricity than their rated
+                            value. SmartWatt models this via the efficiency factor — older appliances get higher
+                            factors.</td>
+                    </tr>
+                    <tr>
+                        <td>Inverter AC</td>
+                        <td>An AC with variable-speed compressor — more efficient at partial loads. In SmartWatt, 5-star
+                            ACs are treated as inverter-type with lower effective wattage.</td>
+                    </tr>
+                    <tr>
+                        <td>Wiring Loss / Transmission Loss</td>
+                        <td>Electricity lost as heat in the home's wiring — typically 2–5% of total consumption. Part of
+                            SmartWatt's system load accounting.</td>
+                    </tr>
+                    <tr>
+                        <td>FSM (Fuel Surcharge Mechanism)</td>
+                        <td>An additional charge on every unit of electricity to cover fuel cost variations. KSEB
+                            charges ₹0.13 per unit as FSM — included in SmartWatt's bill calculation.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="kseb">
+            <div class="card">
+                <h2>🏛️ KSEB &amp; Billing Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>KSEB</td>
+                        <td>Kerala State Electricity Board — the organisation that generates, distributes, and bills
+                            electricity in Kerala. SmartWatt is specifically designed around KSEB's tariff structure.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tariff</td>
+                        <td>The pricing structure for electricity — how much each unit costs. KSEB uses different
+                            tariffs for domestic, commercial, and industrial consumers. SmartWatt uses the Domestic
+                            LT-1A tariff.</td>
+                    </tr>
+                    <tr>
+                        <td>Telescopic Tariff</td>
+                        <td>A slab-based pricing where different units are charged at different rates that increase with
+                            consumption. SmartWatt implements all 5 slabs for ≤250 units: ₹3.25, ₹4.05, ₹5.10, ₹6.95,
+                            ₹8.20 per unit.</td>
+                    </tr>
+                    <tr>
+                        <td>Slab (Tariff Slab)</td>
+                        <td>A range of units charged at the same rate. KSEB slabs are each 50 units wide (0–50, 51–100,
+                            etc.). In SmartWatt for ≤250 units: first 50 units @ ₹3.25, next 50 @ ₹4.05, and so on.</td>
+                    </tr>
+                    <tr>
+                        <td>Flat Rate Tariff</td>
+                        <td>When consumption exceeds 250 units/month, KSEB charges a single flat rate on the entire
+                            consumption. SmartWatt's <code>tariff_config.py</code> stores these flat rates (₹6.40 for
+                            ≤300 units, higher above that).</td>
+                    </tr>
+                    <tr>
+                        <td>Bi-Monthly Billing</td>
+                        <td>KSEB bills every 2 months (every 60 days). SmartWatt multiplies monthly calculations by 2
+                            when showing the estimated bill to match actual KSEB invoices.</td>
+                    </tr>
+                    <tr>
+                        <td>Energy Charge</td>
+                        <td>The main component of the electricity bill based on units consumed × tariff rate. SmartWatt
+                            calculates this using KSEB slabs and doubles it for bi-monthly format.</td>
+                    </tr>
+                    <tr>
+                        <td>Fixed Charge</td>
+                        <td>A flat fee independent of usage — KSEB charges this based on connected load category.
+                            SmartWatt's current implementation focuses on the energy charge portion.</td>
+                    </tr>
+                    <tr>
+                        <td>Units (kWh)</td>
+                        <td>What the electricity meter measures — each "unit" shown on your KSEB bill = 1 kWh. SmartWatt
+                            converts all appliance predictions to monthly units and then calculates the bill.</td>
+                    </tr>
+                    <tr>
+                        <td>LT-1A (Domestic)</td>
+                        <td>KSEB tariff category for domestic residential consumers (Low Tension supply, Category 1A).
+                            SmartWatt's tariff calculation is specifically for this category.</td>
+                    </tr>
+                    <tr>
+                        <td>KSEB Tariff 2024-25</td>
+                        <td>The official tariff rates approved by KSEB for the year 2024–2025. SmartWatt uses these
+                            exact rates: ₹3.25/unit (0–50), ₹4.05 (51–100), ₹5.10 (101–150), ₹6.95 (151–200), ₹8.20
+                            (201–250).</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="database">
+            <div class="card">
+                <h2>🗄️ Database &amp; Storage Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Supabase</td>
+                        <td>Open-source Firebase alternative — provides PostgreSQL database, authentication, and storage
+                            as a service. SmartWatt uses it for user data, appliance details, and prediction storage.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PostgreSQL</td>
+                        <td>A powerful, open-source relational database system. Supabase runs on PostgreSQL — it stores
+                            SmartWatt's user records, predictions, and training data in structured tables.</td>
+                    </tr>
+                    <tr>
+                        <td>JSONB</td>
+                        <td>PostgreSQL's binary JSON storage format — stores JSON data efficiently and supports fast
+                            querying. SmartWatt uses JSONB to store appliance details (each user picks different
+                            appliances with different fields).</td>
+                    </tr>
+                    <tr>
+                        <td>Schema</td>
+                        <td>The structure/definition of a database — what tables exist and what columns they have.
+                            SmartWatt's schema has a <code>smartwatt_training</code> table with columns for user_id,
+                            household data, appliance JSONB, and predictions JSONB.</td>
+                    </tr>
+                    <tr>
+                        <td>Upsert</td>
+                        <td>Database operation that inserts a new record if it doesn't exist, or updates it if it does.
+                            SmartWatt uses upsert so each user has one record that is updated each time they analyse.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Unique Constraint</td>
+                        <td>A database rule ensuring a column has no duplicate values. SmartWatt's <code>user_id</code>
+                            column has a unique constraint — one prediction record per user.</td>
+                    </tr>
+                    <tr>
+                        <td>Row Level Security (RLS)</td>
+                        <td>A Supabase/PostgreSQL feature that restricts which rows a user can read/write. SmartWatt
+                            uses RLS to ensure users can only access their own data.</td>
+                    </tr>
+                    <tr>
+                        <td>Anon Key</td>
+                        <td>Supabase's public API key — safe to include in frontend code. Used by SmartWatt's frontend
+                            to connect to Supabase. Unlike the service key, it respects RLS policies.</td>
+                    </tr>
+                    <tr>
+                        <td>Service Role Key</td>
+                        <td>Supabase's admin key with full database access — bypasses RLS. SmartWatt's backend uses this
+                            to write prediction data and trigger learning pipeline.</td>
+                    </tr>
+                    <tr>
+                        <td>Real-time Subscription</td>
+                        <td>Supabase feature that pushes database changes to connected clients instantly. SmartWatt
+                            could use this for live updates (a future scope item).</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication (Auth)</td>
+                        <td>Verifying user identity. SmartWatt uses Supabase Auth (email/password) — users must log in
+                            before accessing their electricity analysis.</td>
+                    </tr>
+                    <tr>
+                        <td>Session</td>
+                        <td>A temporary authenticated state after login. SmartWatt's frontend checks for an active
+                            Supabase session on startup and restores saved user data if found.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="frontend">
+            <div class="card">
+                <h2>⚛️ Frontend &amp; Web Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Next.js</td>
+                        <td>A React-based web framework for building fast, production-ready web apps. SmartWatt's
+                            frontend is built with Next.js — provides routing, server-side rendering, and optimised
+                            builds.</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>JavaScript library for building user interfaces from reusable components. Next.js is built
+                            on React. SmartWatt's wizard steps, charts, and results panels are all React components.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript</td>
+                        <td>JavaScript with static type checking — catches errors at compile time rather than runtime.
+                            SmartWatt uses TypeScript for the entire frontend — verified with <code>tsc --noEmit</code>
+                            (zero errors).</td>
+                    </tr>
+                    <tr>
+                        <td>Component</td>
+                        <td>A reusable, self-contained piece of UI in React. SmartWatt has components for each wizard
+                            step (HouseholdInfo, ApplianceSelector, UsageDetails, ResultsReport).</td>
+                    </tr>
+                    <tr>
+                        <td>useState Hook</td>
+                        <td>React hook that stores component-level data that triggers re-rendering when changed.
+                            SmartWatt uses it to track current wizard step, selected appliances, and entered specs.</td>
+                    </tr>
+                    <tr>
+                        <td>useEffect Hook</td>
+                        <td>React hook that runs side effects (like API calls or data loading) at specific times.
+                            SmartWatt uses it to load saved user sessions from Supabase on page load.</td>
+                    </tr>
+                    <tr>
+                        <td>Tailwind CSS</td>
+                        <td>Utility-first CSS framework — style elements by applying short class names. SmartWatt uses
+                            Tailwind for all UI styling — responsive layout, colours, spacing.</td>
+                    </tr>
+                    <tr>
+                        <td>Recharts</td>
+                        <td>A React charting library. SmartWatt uses it to render the appliance-wise bar chart showing
+                            monthly kWh consumption per appliance in the results screen.</td>
+                    </tr>
+                    <tr>
+                        <td>Plotly</td>
+                        <td>Interactive chart library. SmartWatt uses Plotly for pie charts and other interactive
+                            visualisations on the results and dashboard pages.</td>
+                    </tr>
+                    <tr>
+                        <td>jsPDF</td>
+                        <td>JavaScript library for generating PDF files in the browser. SmartWatt's
+                            <code>generatePDF.ts</code> uses it to create downloadable electricity analysis reports.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Multi-step Wizard</td>
+                        <td>A UI pattern that guides users through a complex form in steps. SmartWatt's 4-step wizard
+                            (household → appliances → specs → results) reduces overwhelming the user with too many
+                            inputs at once.</td>
+                    </tr>
+                    <tr>
+                        <td>Progressive Disclosure</td>
+                        <td>Showing only relevant information at each step. SmartWatt applies this — you only see AC
+                            fields after selecting AC, not upfront with all other appliances.</td>
+                    </tr>
+                    <tr>
+                        <td>Server-Side Rendering (SSR)</td>
+                        <td>Rendering pages on the server before sending to browser — improves load speed and SEO.
+                            Next.js supports SSR; SmartWatt benefits from faster initial page loads.</td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript Interface</td>
+                        <td>A TypeScript feature that defines the shape of data objects — enforces type safety.
+                            SmartWatt's <code>types.ts</code> defines interfaces like <code>ApplianceUsageDetails</code>
+                            and <code>PredictionResult</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>ESLint</td>
+                        <td>A static code analysis tool for JavaScript/TypeScript — finds and reports coding style
+                            issues. SmartWatt's frontend passed ESLint with zero warnings (verified in audit).</td>
+                    </tr>
+                    <tr>
+                        <td>Vercel</td>
+                        <td>Cloud platform for deploying Next.js apps. SmartWatt's frontend is deployed on Vercel —
+                            automatic builds on code push, global CDN for fast loading.</td>
+                    </tr>
+                    <tr>
+                        <td>Render</td>
+                        <td>Cloud platform for hosting backend apps. SmartWatt's FastAPI backend is deployed on Render
+                            using the <code>Procfile</code> to define the start command.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <section id="general">
+            <div class="card">
+                <h2>💻 General Computer Science Terms</h2>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>What It Is — What It Does in SmartWatt</th>
+                    </tr>
+                    <tr>
+                        <td>Full-Stack Application</td>
+                        <td>An application with both frontend (user interface) and backend (server + database).
+                            SmartWatt is a full-stack app: Next.js frontend + FastAPI backend + Supabase database.</td>
+                    </tr>
+                    <tr>
+                        <td>Service-Oriented Architecture</td>
+                        <td>Designing software as a collection of separate, reusable services each handling one
+                            responsibility. SmartWatt's backend uses this — InputNormalizer, BatchPredictor,
+                            BiasAdjuster, etc. are separate services.</td>
+                    </tr>
+                    <tr>
+                        <td>Modular Design</td>
+                        <td>Organising code into independent, reusable modules. SmartWatt separates concerns into
+                            routers, services, engines, utilities — each file has one clear job.</td>
+                    </tr>
+                    <tr>
+                        <td>Parallel Processing</td>
+                        <td>Running multiple tasks simultaneously instead of one after another. SmartWatt uses Python's
+                            <code>ThreadPoolExecutor</code> to predict all 22 appliances at the same time — 3–5× faster.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Graceful Degradation</td>
+                        <td>System continues working (in a reduced capacity) when a component fails. SmartWatt falls
+                            back to physics-only calculation if the AI model fails to load.</td>
+                    </tr>
+                    <tr>
+                        <td>Input Validation</td>
+                        <td>Checking that user inputs are correct before processing. SmartWatt validates all API inputs
+                            via Pydantic schemas before they reach the AI model.</td>
+                    </tr>
+                    <tr>
+                        <td>Error Handling (try/except)</td>
+                        <td>Code that catches and manages runtime errors gracefully. SmartWatt wraps each simulation
+                            scenario in independent try/except blocks so one failure doesn't block others.</td>
+                    </tr>
+                    <tr>
+                        <td>Environment Variable</td>
+                        <td>A value stored outside the code, loaded at runtime — keeps secrets like API keys safe.
+                            SmartWatt stores Supabase URL and keys in <code>.env</code> / <code>.env.local</code> files.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Docker</td>
+                        <td>A platform for packaging applications into portable containers so they run identically
+                            everywhere. SmartWatt has a <code>Dockerfile</code> for containerised backend deployment.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Docker Compose</td>
+                        <td>Tool for defining and running multi-container Docker applications. SmartWatt's
+                            <code>docker-compose.yml</code> starts both frontend and backend together.</td>
+                    </tr>
+                    <tr>
+                        <td>Singleton</td>
+                        <td>Design pattern ensuring a class has only one instance. SmartWatt's
+                            <code>AppliancePredictor</code> is a singleton — one shared instance holds all 22 loaded
+                            models to save memory.</td>
+                    </tr>
+                    <tr>
+                        <td>Data Persistence</td>
+                        <td>Saving data so it survives beyond the current session. SmartWatt persists user inputs and
+                            predictions to Supabase so users can return and see their previous analysis.</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td>UI that adapts to different screen sizes (desktop, tablet, mobile). SmartWatt's frontend
+                            uses Tailwind CSS responsive utilities for good mobile and desktop experience.</td>
+                    </tr>
+                    <tr>
+                        <td>CDN (Content Delivery Network)</td>
+                        <td>A network of servers that deliver web content from the location closest to the user — faster
+                            loading. Vercel deploys SmartWatt's frontend on a global CDN.</td>
+                    </tr>
+                    <tr>
+                        <td>Transformer (ML preprocessing)</td>
+                        <td>Also refers to the scikit-learn <code>ColumnTransformer</code> that applies different
+                            preprocessing to different columns. SmartWatt's preprocessor saved as <code>.pkl</code> is a
+                            fitted ColumnTransformer.</td>
+                    </tr>
+                    <tr>
+                        <td>API Documentation (Swagger)</td>
+                        <td>FastAPI automatically generates interactive API documentation at <code>/docs</code> — shows
+                            all endpoints, their inputs, and outputs. SmartWatt's backend docs are available at
+                            <code>http://localhost:8000/docs</code>.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- MASTER QUICK LOOKUP -->
+        <section>
+            <div class="card">
+                <h2>⚡ Master Quick Lookup — Most Likely Asked Terms</h2>
+                <div class="note">These are the terms most likely asked in a viva. Read each one until confident.</div>
+                <table>
+                    <tr>
+                        <th>If Mentor Asks About…</th>
+                        <th>Say This in One Line</th>
+                    </tr>
+                    <tr>
+                        <td>Neural Network</td>
+                        <td>An AI model made of layers of neurons that learns patterns from data — SmartWatt uses 22 of
+                            them, one per appliance.</td>
+                    </tr>
+                    <tr>
+                        <td>Hybrid AI-Physics</td>
+                        <td>AI predicts efficiency factor and hours; Physics gives base watts; combined → monthly kWh =
+                            (watts × efficiency × hours × 30)/1000.</td>
+                    </tr>
+                    <tr>
+                        <td>Monte Carlo Simulation</td>
+                        <td>Randomly generating thousands of realistic data samples — SmartWatt used it to create 12,000
+                            Kerala household training profiles.</td>
+                    </tr>
+                    <tr>
+                        <td>Efficiency Factor</td>
+                        <td>AI-predicted number (0.5–1.5) representing how much more/less power an appliance uses than
+                            its rated value due to age/degradation.</td>
+                    </tr>
+                    <tr>
+                        <td>Effective Hours</td>
+                        <td>AI-predicted actual daily usage hours (0–24) for the appliance given the household's season,
+                            size, and location.</td>
+                    </tr>
+                    <tr>
+                        <td>System Load (15%)</td>
+                        <td>Unaccounted electricity from standby devices and wiring losses — capped at 15% of total so
+                            predictions match the real bill.</td>
+                    </tr>
+                    <tr>
+                        <td>Anomaly Detection</td>
+                        <td>Checking if usage hours or efficiency exceed safe thresholds — two types: Usage Anomaly and
+                            Efficiency Anomaly.</td>
+                    </tr>
+                    <tr>
+                        <td>Telescopic Tariff</td>
+                        <td>KSEB's slab pricing where each 50-unit block has a higher rate: ₹3.25 → ₹4.05 → ₹5.10 →
+                            ₹6.95 → ₹8.20/unit.</td>
+                    </tr>
+                    <tr>
+                        <td>FastAPI</td>
+                        <td>Python web framework used for SmartWatt's backend — fast, auto-generates API docs at /docs,
+                            has built-in Pydantic validation.</td>
+                    </tr>
+                    <tr>
+                        <td>Pydantic</td>
+                        <td>Python validation library — enforces rules on all API inputs so wrong data never reaches the
+                            AI model.</td>
+                    </tr>
+                    <tr>
+                        <td>Supabase / PostgreSQL</td>
+                        <td>The cloud database — stores user data and predictions using JSONB for flexible appliance
+                            storage without schema changes.</td>
+                    </tr>
+                    <tr>
+                        <td>JSONB</td>
+                        <td>PostgreSQL's binary JSON format — used to store varying appliance configurations without
+                            needing separate columns for every field.</td>
+                    </tr>
+                    <tr>
+                        <td>Dropout</td>
+                        <td>Regularization technique — randomly disables 20% of neurons during training to prevent the
+                            model memorising data (overfitting).</td>
+                    </tr>
+                    <tr>
+                        <td>Early Stopping</td>
+                        <td>Stops training when validation loss has not improved for 10 epochs and restores the best
+                            weights — saves time and prevents overfitting.</td>
+                    </tr>
+                    <tr>
+                        <td>Confidence Score</td>
+                        <td>A 60–99.9% reliability indicator for each prediction — reduced if anomalies found, AI falls
+                            back to physics, or input features are missing.</td>
+                    </tr>
+                    <tr>
+                        <td>Self-Learning</td>
+                        <td>Every 6 hours, predictions are compared to actual bills — if a better model results, it's
+                            deployed automatically to keep improving.</td>
+                    </tr>
+                    <tr>
+                        <td>MAE / R²</td>
+                        <td>Model quality metrics — MAE measures average error size, R² measures how well the model
+                            explains variation. New model replaces old only if better on both.</td>
+                    </tr>
+                    <tr>
+                        <td>StandardScaler</td>
+                        <td>Normalises numbers to mean=0, std=1 before feeding to AI — prevents large-valued features
+                            from dominating training.</td>
+                    </tr>
+                    <tr>
+                        <td>OneHotEncoding</td>
+                        <td>Converts text categories (summer/monsoon/urban/rural) into 0s and 1s that the neural network
+                            can process.</td>
+                    </tr>
+                    <tr>
+                        <td>Parallel Predictions (ThreadPoolExecutor)</td>
+                        <td>Runs all 22 appliance predictions simultaneously in separate threads — makes the system 3–5×
+                            faster than sequential processing.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <footer
+            style="text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid var(--border);margin-top:20px;font-size:.88rem">
+            SmartWatt — AI Based Electricity Consumption Analysis System · BCA 2025-2026 · University of Calicut<br>
+            <span style="color:var(--accent)">Good luck on your Viva! ⚡</span>
+        </footer>
+
+    </div>
+</body>
+
+</html>

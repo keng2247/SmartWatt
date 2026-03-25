@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SmartWatt – Files Guide</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --card2: #1c2128;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --yellow: #d29922;
+            --red: #f85149;
+            --purple: #bc8cff;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --border: #30363d
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7
+        }
+
+        .wrap {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f2d3d, #0d1117);
+            border-bottom: 1px solid var(--border);
+            padding: 32px 20px;
+            text-align: center
+        }
+
+        header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, var(--accent), var(--purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 6px
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: .93rem
+        }
+
+        nav {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: .82rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: all .2s;
+            text-decoration: none
+        }
+
+        nav a:hover {
+            background: var(--card2);
+            color: var(--accent)
+        }
+
+        section {
+            margin: 28px 0
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 14px 0
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .card h3 {
+            color: var(--yellow);
+            font-size: 1rem;
+            margin: 18px 0 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px dashed var(--border)
+        }
+
+        .note {
+            background: #0d1f2d;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            color: #a8d4f5;
+            font-size: .93rem
+        }
+
+        .warn {
+            background: #2a1f00;
+            border-left: 4px solid var(--yellow);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 12px 0;
+            color: #e4c072;
+            font-size: .93rem
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: .9rem
+        }
+
+        th {
+            background: var(--card2);
+            color: var(--accent);
+            padding: 10px 14px;
+            text-align: left;
+            border: 1px solid var(--border);
+            font-weight: 600
+        }
+
+        td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: #c9d1d9;
+            vertical-align: top
+        }
+
+        td:first-child {
+            white-space: nowrap;
+            min-width: 220px
+        }
+
+        tr:nth-child(even) td {
+            background: #1a1f27
+        }
+
+        code {
+            background: #1e2a3a;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: .87rem;
+            color: #79c0ff;
+            font-family: 'Courier New', monospace
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 9px;
+            border-radius: 12px;
+            font-size: .75rem;
+            font-weight: 700;
+            margin-right: 5px;
+            vertical-align: middle
+        }
+
+        .b-blue {
+            background: #1f3a5f;
+            color: var(--accent)
+        }
+
+        .b-green {
+            background: #1a3a2a;
+            color: var(--green)
+        }
+
+        .b-yellow {
+            background: #3a2e00;
+            color: var(--yellow)
+        }
+
+        .b-red {
+            background: #3a1a1a;
+            color: var(--red)
+        }
+
+        .b-purple {
+            background: #2a1a4a;
+            color: var(--purple)
+        }
+
+        .hl {
+            color: var(--accent);
+            font-weight: 600
+        }
+
+        .hl-g {
+            color: var(--green);
+            font-weight: 600
+        }
+
+        .hl-y {
+            color: var(--yellow);
+            font-weight: 600
+        }
+
+        .tip {
+            background: #1a1a2e;
+            border-left: 4px solid var(--purple);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            color: #d0b8ff;
+            font-size: .95rem
+        }
+
+        @media(max-width:600px) {
+            td:first-child {
+                white-space: normal;
+                min-width: unset
+            }
+
+            header h1 {
+                font-size: 1.5rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>📁 SmartWatt — All Files Explained</h1>
+        <p>Every project file with a simple 1–2 line explanation · Perfect for Viva Preparation</p>
+    </header>
+    <nav>
+        <a href="#core">Core Backend</a>
+        <a href="#services">Services</a>
+        <a href="#routers">Routers</a>
+        <a href="#utils-be">Utils (BE)</a>
+        <a href="#data">Data &amp; Config</a>
+        <a href="#training">Training</a>
+        <a href="#pages">Pages (FE)</a>
+        <a href="#config-fe">Config (FE)</a>
+        <a href="#lib">Lib (FE)</a>
+        <a href="#setup">Setup Files</a>
+        <a href="#root">Root Files</a>
+    </nav>
+    <div class="wrap">
+
+        <div class="tip">💡 <strong>Most important file?</strong> → <code>predictor.py</code> — it connects the AI model
+            with the physics engine and generates every single prediction in the system.</div>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="core">
+            <div class="card">
+                <h2>🐍 Backend — Core App Files</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>main.py</code> <span class="badge b-red">ENTRY POINT</span></td>
+                        <td>The <span class="hl">main server file</span>. Starts the FastAPI app, loads all 22 AI models
+                            on startup, and sets up CORS so the frontend can talk to the backend.</td>
+                    </tr>
+                    <tr>
+                        <td><code>predictor.py</code> <span class="badge b-blue">CORE AI</span></td>
+                        <td>The <span class="hl">brain of the system</span>. Takes appliance data, runs the correct
+                            neural network model, applies the physics formula, calculates monthly kWh, and returns the
+                            result with confidence score.</td>
+                    </tr>
+                    <tr>
+                        <td><code>physics_engine.py</code> <span class="badge b-green">PHYSICS</span></td>
+                        <td>The <span class="hl">wattage calculator</span>. Converts appliance specs (tonnage, star
+                            rating, HP) into rated watts using electrical formulas — e.g. AC:
+                            <code>tonnage × 1200 × (1 + (5−star)×0.1)</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>anomaly_engine.py</code> <span class="badge b-red">DETECTION</span></td>
+                        <td>The <span class="hl">fault detector</span>. Checks if usage hours or efficiency factor are
+                            abnormal and raises warnings — Usage Anomaly (too many hours) or Efficiency Critical (25%
+                            more power than rated).</td>
+                    </tr>
+                    <tr>
+                        <td><code>kseb_tariff.py</code> <span class="badge b-yellow">BILLING</span></td>
+                        <td>The <span class="hl">KSEB bill calculator</span>. Uses 2024-25 telescopic slab rates (₹3.25
+                            to ₹8.80/unit) plus Fuel Surcharge (₹0.13/unit) to calculate the actual bi-monthly
+                            electricity bill.</td>
+                    </tr>
+                    <tr>
+                        <td><code>tariff_config.py</code> <span class="badge b-yellow">CONFIG</span></td>
+                        <td>The <span class="hl">tariff data store</span>. Stores the KSEB slab rates and FSM value as
+                            Python lists — kept separate so you only need to update one file when rates change.</td>
+                    </tr>
+                    <tr>
+                        <td><code>simulation_service.py</code> <span class="badge b-purple">SIMULATION</span></td>
+                        <td>The <span class="hl">"What-If" engine</span>. Runs 8 upgrade scenarios (upgrade AC star
+                            rating, switch to BLDC fan, replace old fridge, etc.) and shows how many kWh you would save
+                            each month.</td>
+                    </tr>
+                    <tr>
+                        <td><code>schemas.py</code> <span class="badge b-blue">VALIDATION</span></td>
+                        <td>The <span class="hl">input validator</span>. Defines Pydantic models for every appliance —
+                            enforces rules like AC tonnage must be 0.5–5.0, star rating 1–5, season must be
+                            "summer/monsoon/winter". If wrong → AI never runs.</td>
+                    </tr>
+                    <tr>
+                        <td><code>range_resolver.py</code> <span class="badge b-green">UTILITY</span></td>
+                        <td>The <span class="hl">range converter</span>. Converts string ranges like
+                            <code>"3-5 years"</code> or <code>"10+"</code> into real numbers the AI model can use as
+                            input features.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>physics_constants.py</code> <span class="badge b-green">CONSTANTS</span></td>
+                        <td>The <span class="hl">appliance reference values</span>. Stores standard wattage constants
+                            for all 22 appliances (e.g., Standard Fan = 75W, BLDC Fan = 30W, LED = 9W, Geyser = 2000W).
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="services">
+            <div class="card">
+                <h2>⚙️ Backend — Services Folder (<code>services/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>__init__.py</code></td>
+                        <td>The <span class="hl">package exporter</span>. Imports and exposes all 5 service classes so
+                            the router can use them all with just one import line.</td>
+                    </tr>
+                    <tr>
+                        <td><code>input_normalizer.py</code></td>
+                        <td>The <span class="hl">input cleaner</span>. Extracts the common household context (season,
+                            occupants, location) from the batch request once and organises each appliance's data
+                            separately before prediction.</td>
+                    </tr>
+                    <tr>
+                        <td><code>batch_predictor.py</code></td>
+                        <td>The <span class="hl">batch runner</span>. Loops through all selected appliances, calls the
+                            predictor for each one, and collects all results into a single list to be returned together.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>bias_adjuster.py</code></td>
+                        <td>The <span class="hl">self-correction layer</span>. Applies a learned bias multiplier from
+                            <code>user_biases.json</code> to fine-tune predictions based on what this user's past data
+                            showed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>learning_pipeline.py</code></td>
+                        <td>The <span class="hl">auto-retrainer</span>. Every 6 hours, compares predicted kWh vs actual
+                            bill. If the new model has a lower MAE and higher R², it replaces the current production
+                            model automatically.</td>
+                    </tr>
+                    <tr>
+                        <td><code>system_load_balancer.py</code></td>
+                        <td>The <span class="hl">balance keeper</span>. Caps unaccounted electricity (standby, wiring
+                            losses) at 15% of total consumption. If exceeded, redistributes excess to major appliances:
+                            Fridge 35%, Fan 30%, LED 20%, AC 10%, TV 5%.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="routers">
+            <div class="card">
+                <h2>🛣️ Backend — Routers Folder (<code>routers/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>appliances.py</code> <span class="badge b-red">ALL ENDPOINTS</span></td>
+                        <td>Contains <span class="hl">all API endpoints</span>: <code>/predict-appliance</code> (single
+                            appliance), <code>/predict-all</code> (full batch with balancing + learning), and
+                            <code>/simulate-savings</code> (what-if scenarios). Handles validation, field mapping, and
+                            calls the predictor.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="utils-be">
+            <div class="card">
+                <h2>🔧 Backend — Utils Folder (<code>utils/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>prediction_logger.py</code></td>
+                        <td>The <span class="hl">console logger</span>. Prints a clean, formatted summary of each
+                            prediction to the server terminal — shows the source (AI / Physics / Fallback), hours, kWh,
+                            and confidence.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="data">
+            <div class="card">
+                <h2>💾 Backend — Data &amp; Config Files</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>learned_params.json</code></td>
+                        <td>The <span class="hl">learned adjustment store</span>. Stores the bias correction values per
+                            user, updated by the LearningPipeline after every retraining cycle.</td>
+                    </tr>
+                    <tr>
+                        <td><code>user_biases.json</code></td>
+                        <td>The <span class="hl">user-specific biases file</span>. Keeps per-user efficiency multipliers
+                            that are applied to predictions to personalise the accuracy of results.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.env</code></td>
+                        <td>The <span class="hl">secret keys file</span>. Stores the Supabase URL and API key — never
+                            shared publicly, loaded by the server at runtime using python-dotenv.</td>
+                    </tr>
+                    <tr>
+                        <td><code>requirements.txt</code></td>
+                        <td>The <span class="hl">Python dependency list</span>. Lists all libraries needed (FastAPI,
+                            TensorFlow, Pandas, scikit-learn, etc.) — run <code>pip install -r requirements.txt</code>
+                            to install everything.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Procfile</code></td>
+                        <td>The <span class="hl">deployment instruction</span>. Tells Render (the cloud hosting
+                            platform) exactly how to start the server: <code>uvicorn main:app --host 0.0.0.0</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>start_backend.bat</code></td>
+                        <td>The <span class="hl">local start shortcut</span>. A Windows batch file — double-click it to
+                            start the backend server instantly without typing commands.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="training">
+            <div class="card">
+                <h2>🤖 Backend — Training &amp; Model Files</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>train.py</code> <span class="badge b-purple">ML TRAINING</span></td>
+                        <td>The <span class="hl">AI model trainer</span>. Trains all 22 neural network models on the
+                            synthetic dataset. Each model predicts Efficiency Factor and Effective Hours. Saves output
+                            as <code>models/appliancename_model.keras</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>newdataset.py</code> <span class="badge b-purple">DATA GEN</span></td>
+                        <td>The <span class="hl">dataset generator</span>. Uses Monte Carlo simulation to create 12,000
+                            synthetic Kerala household profiles with realistic appliance specs, seasons, and usage
+                            patterns for training.</td>
+                    </tr>
+                    <tr>
+                        <td><code>models/</code> (folder) <span class="badge b-green">22 MODELS</span></td>
+                        <td>The <span class="hl">trained AI models store</span>. Contains all 22 <code>.keras</code>
+                            neural network model files AND 22 <code>.pkl</code> preprocessor files — one pair per
+                            appliance type. Loaded at server startup.</td>
+                    </tr>
+                    <tr>
+                        <td><code>kerala_smartwatt_ai.csv</code></td>
+                        <td>The <span class="hl">raw training dataset</span>. The 12,000-row CSV file generated by
+                            <code>newdataset.py</code> — used by <code>train.py</code> to train all 22 models.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="pages">
+            <div class="card">
+                <h2>⚛️ Frontend — App Pages (<code>src/app/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>app/page.tsx</code> <span class="badge b-red">MAIN PAGE</span></td>
+                        <td>The <span class="hl">4-step wizard</span> — the heart of the UI. Users enter household info
+                            (Step 1), select appliances (Step 2), enter specs (Step 3), and view results with charts and
+                            bill estimate (Step 4).</td>
+                    </tr>
+                    <tr>
+                        <td><code>app/layout.tsx</code></td>
+                        <td>The <span class="hl">root wrapper</span>. Wraps every page with common HTML structure,
+                            Google Fonts, and metadata (title and description for SEO and browser tab).</td>
+                    </tr>
+                    <tr>
+                        <td><code>app/globals.css</code></td>
+                        <td>The <span class="hl">global stylesheet</span>. Defines the design system — colours, fonts,
+                            animations, and base styles that are shared across the entire application.</td>
+                    </tr>
+                    <tr>
+                        <td><code>app/dashboard/page.tsx</code></td>
+                        <td>The <span class="hl">user dashboard</span>. Shows the logged-in user's saved electricity
+                            analysis — displays past predictions and history from Supabase.</td>
+                    </tr>
+                    <tr>
+                        <td><code>app/login/page.tsx</code></td>
+                        <td>The <span class="hl">login page</span>. Supabase-powered sign-in form for existing users to
+                            access their saved analysis.</td>
+                    </tr>
+                    <tr>
+                        <td><code>app/register/page.tsx</code></td>
+                        <td>The <span class="hl">registration page</span>. Sign-up form for new users to create an
+                            account using Supabase Auth.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="config-fe">
+            <div class="card">
+                <h2>🗂️ Frontend — Config Files (<code>src/config/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>appliances.ts</code></td>
+                        <td>The <span class="hl">appliance master list</span>. Defines all 22 appliances with their
+                            display names, icons, and category groupings shown on the appliance selection screen (Step
+                            2).</td>
+                    </tr>
+                    <tr>
+                        <td><code>usageForms.ts</code></td>
+                        <td>The <span class="hl">form field definitions</span>. Specifies exactly which input fields
+                            appear for each appliance (e.g., AC needs tonnage + star rating + daily hours). This drives
+                            the dynamic input form in Step 3.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="lib">
+            <div class="card">
+                <h2>📚 Frontend — Library Files (<code>src/lib/</code>)</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>api/client.ts</code> <span class="badge b-blue">API</span></td>
+                        <td>The <span class="hl">backend connector</span>. Sets up the Axios HTTP client pointing to
+                            <code>http://localhost:8000</code> (or deployed URL) with a 30-second timeout and JSON
+                            content type headers.</td>
+                    </tr>
+                    <tr>
+                        <td><code>api.ts</code></td>
+                        <td>The <span class="hl">API shortcut</span>. A simple re-export of the API client, making it
+                            easy to import and call backend endpoints from any component in the app.</td>
+                    </tr>
+                    <tr>
+                        <td><code>supabaseClient.ts</code></td>
+                        <td>The <span class="hl">database connector</span>. Creates and exports the Supabase client
+                            instance using the project URL and anon key from <code>.env.local</code> — used for auth and
+                            data storage.</td>
+                    </tr>
+                    <tr>
+                        <td><code>authUtils.ts</code></td>
+                        <td>The <span class="hl">login helper</span>. Utility functions for checking login status,
+                            getting the current user session, and redirecting to login page if not authenticated.</td>
+                    </tr>
+                    <tr>
+                        <td><code>transformFields.ts</code> <span class="badge b-yellow">KEY FILE</span></td>
+                        <td>The <span class="hl">field name mapper</span>. Converts UI field names (like
+                            <code>ac_star</code>, <code>fridge_capacity</code>) to the exact backend field names (like
+                            <code>ac_star_rating</code>, <code>fridge_capacity_liters</code>) before sending to API.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>tariffUtils.ts</code></td>
+                        <td>The <span class="hl">frontend bill calculator</span>. A TypeScript copy of the KSEB tariff
+                            logic so the UI can show a live bill estimate without calling the backend — used for instant
+                            feedback.</td>
+                    </tr>
+                    <tr>
+                        <td><code>energyUtils.ts</code> <span class="badge b-green">PHYSICS FE</span></td>
+                        <td>The <span class="hl">frontend physics engine</span>. Calculates approximate kWh in the
+                            browser using physics formulas (same logic as backend's physics_engine.py) — used as a
+                            preview before AI results arrive. Also handles the "distribute energy gap" logic to make the
+                            total match the user's bill.</td>
+                    </tr>
+                    <tr>
+                        <td><code>normalizePattern.ts</code></td>
+                        <td>The <span class="hl">pattern converter</span>. Converts user-selected usage patterns (like
+                            <code>"heavy"</code>, <code>"moderate"</code>) into the exact format the backend expects for
+                            AI processing.</td>
+                    </tr>
+                    <tr>
+                        <td><code>physicsConstants.ts</code></td>
+                        <td>The <span class="hl">frontend constants store</span>. Contains reference wattage values
+                            (Fan=75W, LED=9W, BLDC=30W, etc.) and physics ratios used by energyUtils.ts for browser-side
+                            calculations.</td>
+                    </tr>
+                    <tr>
+                        <td><code>types.ts</code></td>
+                        <td>The <span class="hl">TypeScript type definitions</span>. Defines shared interfaces like
+                            <code>ApplianceUsageDetails</code>, <code>PredictionResult</code>, and
+                            <code>HouseholdData</code> used across all frontend files for type safety.</td>
+                    </tr>
+                    <tr>
+                        <td><code>usageAlerts.ts</code></td>
+                        <td>The <span class="hl">alert message generator</span>. Checks prediction results and creates
+                            human-readable tips (e.g., "Your geyser runs too long — consider reducing to 30 min/day")
+                            shown on the results screen.</td>
+                    </tr>
+                    <tr>
+                        <td><code>generatePDF.ts</code></td>
+                        <td>The <span class="hl">PDF report creator</span>. Uses jsPDF to generate a downloadable PDF
+                            report of the full electricity analysis including all appliance data, charts summary, and
+                            KSEB bill estimate.</td>
+                    </tr>
+                    <tr>
+                        <td><code>diagnostics.tsx</code></td>
+                        <td>The <span class="hl">developer debug panel</span>. A hidden component that shows API
+                            connection status, backend health check result, and model loading state — only used during
+                            development and testing.</td>
+                    </tr>
+                    <tr>
+                        <td><code>verifyPersistence.ts</code></td>
+                        <td>The <span class="hl">save verifier</span>. After saving user data to Supabase, this checks
+                            that the data was actually written successfully and logs any database errors to the console.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>utils.ts</code></td>
+                        <td>The <span class="hl">general utilities file</span>. Contains small helper functions used
+                            throughout the frontend — mainly the <code>cn()</code> function for merging Tailwind CSS
+                            class names conditionally.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="setup">
+            <div class="card">
+                <h2>⚙️ Frontend — Setup &amp; Config Files</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>next.config.ts</code></td>
+                        <td>The <span class="hl">Next.js configuration</span>. Project-level settings for the framework
+                            — image optimization domains, environment variable exposure, and build options.</td>
+                    </tr>
+                    <tr>
+                        <td><code>package.json</code></td>
+                        <td>The <span class="hl">frontend dependency list</span>. Lists all JavaScript libraries
+                            (Next.js, React, Axios, Recharts, jsPDF, Supabase, Plotly, etc.) and defines npm scripts
+                            like <code>npm run dev</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>tsconfig.json</code></td>
+                        <td>The <span class="hl">TypeScript compiler settings</span>. Enables strict mode and sets the
+                            <code>@/</code> path alias to point to the <code>src/</code> folder so imports are shorter
+                            and cleaner.</td>
+                    </tr>
+                    <tr>
+                        <td><code>eslint.config.mjs</code></td>
+                        <td>The <span class="hl">code quality rules</span>. ESLint configuration that enforces
+                            consistent coding standards across the frontend — we verified zero warnings during our
+                            audit.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.env.local</code></td>
+                        <td>The <span class="hl">frontend secrets file</span>. Stores
+                            <code>NEXT_PUBLIC_SUPABASE_URL</code> and <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code> —
+                            needed for database and auth to work.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.env.example</code></td>
+                        <td>The <span class="hl">environment template</span>. Shows all variables that need to be
+                            configured — shared safely as a reference without exposing real keys.</td>
+                    </tr>
+                    <tr>
+                        <td><code>vercel.json</code></td>
+                        <td>The <span class="hl">Vercel deployment config</span>. Tells Vercel (the frontend cloud host)
+                            how to build and serve the Next.js application.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <section id="root">
+            <div class="card">
+                <h2>📦 Root Project Files</h2>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>What It Does (Simple Explanation)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Dockerfile</code></td>
+                        <td>The <span class="hl">container definition</span>. Instructions for packaging the entire
+                            backend into a Docker container for consistent, reproducible deployment on any platform.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>docker-compose.yml</code></td>
+                        <td>The <span class="hl">multi-container launcher</span>. Starts both the frontend and backend
+                            together using Docker with one command — simplifies local setup and cloud deployment.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Run.txt</code></td>
+                        <td>The <span class="hl">quick start guide</span>. A simple text file with the exact terminal
+                            commands needed to start both frontend and backend for local development.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.env</code> (root)</td>
+                        <td>The <span class="hl">root environment file</span>. Shared environment variables used by
+                            Docker Compose to pass secrets to both frontend and backend containers during startup.</td>
+                    </tr>
+                    <tr>
+                        <td><code>report.md</code></td>
+                        <td>The <span class="hl">full project report</span>. The complete 888-line academic report
+                            submitted to University of Calicut — covers introduction, architecture, code, results, and
+                            future scope.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section>
+            <div class="card">
+                <h2>📊 Files at a Glance</h2>
+                <table>
+                    <tr>
+                        <th>Area</th>
+                        <th>Count</th>
+                        <th>Most Important File</th>
+                    </tr>
+                    <tr>
+                        <td>Backend Core</td>
+                        <td>10 files</td>
+                        <td><code>predictor.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>Backend Services</td>
+                        <td>6 files</td>
+                        <td><code>system_load_balancer.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>Backend Routers</td>
+                        <td>1 file</td>
+                        <td><code>routers/appliances.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>Backend Utils</td>
+                        <td>1 file</td>
+                        <td><code>prediction_logger.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>AI Models</td>
+                        <td>22 × 2 = 44 model files</td>
+                        <td><code>models/</code> folder</td>
+                    </tr>
+                    <tr>
+                        <td>Training Scripts</td>
+                        <td>2 files</td>
+                        <td><code>train.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>Frontend Pages</td>
+                        <td>6 pages</td>
+                        <td><code>app/page.tsx</code></td>
+                    </tr>
+                    <tr>
+                        <td>Frontend Config</td>
+                        <td>2 files</td>
+                        <td><code>usageForms.ts</code></td>
+                    </tr>
+                    <tr>
+                        <td>Frontend Library</td>
+                        <td>15 files</td>
+                        <td><code>transformFields.ts</code>, <code>energyUtils.ts</code></td>
+                    </tr>
+                    <tr>
+                        <td>Setup &amp; Config</td>
+                        <td>7 files</td>
+                        <td><code>package.json</code></td>
+                    </tr>
+                    <tr>
+                        <td>Root Files</td>
+                        <td>5 files</td>
+                        <td><code>docker-compose.yml</code></td>
+                    </tr>
+                </table>
+                <div class="warn" style="margin-top:14px">⚠️ <strong>If asked "which file is most important":</strong>
+                    Say <code>predictor.py</code> for backend, <code>app/page.tsx</code> for frontend, and
+                    <code>routers/appliances.py</code> for API communication between them.</div>
+            </div>
+        </section>
+
+        <footer
+            style="text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid var(--border);margin-top:20px;font-size:.88rem">
+            SmartWatt — AI Based Electricity Consumption Analysis System · BCA 2025-2026 · University of Calicut<br>
+            <span style="color:var(--accent)">Good luck on your Viva! ⚡</span>
+        </footer>
+
+    </div>
+</body>
+
+</html>
